@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Upload and Processing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        /* Your existing styles... */
+
+        .navbar {
+            background-color: #333;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+        }
+
+        .file-input-box {
+            border: 2px dashed #ccc;
+            padding: 100px;
+            text-align: center;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        body {
+            background-image: url("https://www.niemanlab.org/images/npr-digital-services-audio-viral-sharing.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .custom-orange {
+            background-color: tomato;
+            color: white;
+        }
+
+        .custom-green {
+            background-color: tomato;
+            color: white;
+        }
+
+        .custom-yellow {
+            background-color: tomato;
+            color: white;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: orange;
+        }
+        
+        /* Added space between buttons */
+        .button-spacing {
+            margin-right: 10px; /* Adjust the value as per your preference */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Video Processing App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/upload">Upload Video</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More Options
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Feature 1</a>
+                        <a class="dropdown-item" href="#">Feature 2</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Other</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://example.com" target="_blank">External Link</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main content -->
+    <div class="center-content">
+        <h1>Welcome to Video Processing App</h1>
+        <div class="file-input-box">
+            <label for="fileInput">Choose File</label>
+            <input type="file" id="fileInput">
+        </div>
+        <button class="btn btn-primary mt-3">Upload and Process</button>
+
+        <div class="mt-3 d-flex flex-column">
+            <div class="d-flex justify-content-between mt-2">
+                <button class="btn custom-orange button-spacing">Submit Additional Input</button>
+                <div class="btn-group">
+                    <button type="button" class="btn custom-orange dropdown-toggle button-spacing" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More Options
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Another Option</a>
+                    </div>
+                </div>
+                <button class="btn custom-green button-spacing">Button 1</button>
+                <button class="btn custom-yellow">Button 2</button>
+            </div>
+            <label for="additionalInput" class="mt-3">Summary</label>
+            <textarea id="additionalInput" class="form-control" style="width: 500px; height: 200px; resize: none;"></textarea>
+            
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Video Processing App. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
